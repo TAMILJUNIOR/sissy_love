@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sweet Playlist for You</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom right, #ffe0f0, #fce4ec);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: #d81b60;
+      font-size: 2.5em;
+    }
+
+    .song-button {
+      width: 300px;
+      background-color: #fff;
+      border: 2px solid #f06292;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .song-button:hover {
+      background-color: #f8bbd0;
+      transform: scale(1.05);
+    }
+
+    audio {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎶 my playlist for you dearr 🎧</h1>
+
+  <div class="song-button" onclick="playSong('song1')">🛌 “To sleep”</div>
+  <audio id="song1" src="music/to_sleep.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song2')">😔 “When u feel alone”</div>
+  <audio id="song2" src="music/when_you_feel_alone.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song3')">🤗 “Want a cuddle”</div>
+  <audio id="song3" src="music/want_a_cuddle.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song4')">💖 “Feel better”</div>
+  <audio id="song4" src="music/feel_better.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song5')">🎁 “Special something”</div>
+  <audio id="song5" src="music/special_something.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song6')">💃 “Wanna vibe..?”</div>
+  <audio id="song6" src="music/wanna_vibe.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song7')">💪 “Get motivated!”</div>
+  <audio id="song7" src="music/get_motivated.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song8')">❤️ “My heart says”</div>
+  <audio id="song8" src="music/my_heart_says.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song9')">🔥 “Love mode on”</div>
+  <audio id="song9" src="music/love_mode_on.mp3" controls></audio>
+
+  <div class="song-button" onclick="playSong('song10')">🥺 “Come here sissy”</div>
+  <audio id="song10" src="music/come_here_sissy.mp3" controls></audio>
+
+  <script>
+    function playSong(id) {
+      // Pause all songs
+      document.querySelectorAll('audio').forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.style.display = 'none';
+      });
+
+      // Play selected song
+      const selected = document.getElementById(id);
+      selected.style.display = 'block';
+      selected.play();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>warninggs!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #ffeef2;
+      font-family: 'Shadows Into Light', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #d45c8b;
+      margin-bottom: 30px;
+    }
+
+    .emoji-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .emoji-box {
+      font-size: 3em;
+      cursor: pointer;
+      padding: 20px 40px;
+      border-radius: 12px;
+      background-color: #fff0f5;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid #f7c1d1;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .emoji-box:hover {
+      transform: scale(1.05);
+      background-color: #ffe3ed;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💗 please stay cool 💗</h1>
+
+  <div class="emoji-container">
+    <div class="emoji-box" onclick="showMessage(1)">😤</div>
+    <div class="emoji-box" onclick="showMessage(2)">🙃</div>
+    <div class="emoji-box" onclick="showMessage(3)">🤒</div>
+  </div>
+
+  <script>
+    function showMessage(type) {
+      if (type === 1) {
+        alert("don't get angry my love 😤\n i know u r a hot headed person but handle it like a queen👑");
+      } else if (type === 2) {
+        alert("eat well and drink water regularly beautyy..🙃\n dont skip food often and make me worry🤧");
+      } else if (type === 3) {
+        alert("take care of your health lalli...🤒\n if u get sick take care of you and get well soon🫂");
+      }
+    }
+  </script>
+
+</body>
+</html>

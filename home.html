@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome My Sweetheart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #fde2e2);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      z-index: 2;
+    }
+
+    .box {
+      background-color: #ffe6ea;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #d63384;
+      box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+      transition: transform 0.3s ease, background 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+      background-color: #ffc6d6;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      border-radius: 50%;
+      animation: floatUp 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -5%;
+        left: calc(10% + 80% * random());
+        opacity: 0.7;
+      }
+      100% {
+        bottom: 110%;
+        left: calc(15% + 70% * random());
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDuration = `${6 + Math.random() * 6}s`;
+      heart.style.width = heart.style.height = `${10 + Math.random() * 15}px`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="container">
+    <a class="box" href="love_letter.html">📩 U have a sweet love letter... wanna open dear?</a>
+    <a class="box" href="playlist.html">🎶 This is a sweet playlist for you dear</a>
+    <a class="box" href="warnings.html">😤 some of my warnings</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Sweet Love Letter 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #fceef4;
+      font-family: 'Caveat', cursive;
+      color: #4b2e2e;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .letter-container {
+      background-image: url('images/download.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 60px 40px;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      font-size: 1.4em;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      border: 2px solid #d8c18f;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-weight: 500;
+      color: #a0522d;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgm" autoplay loop>
+    <source src="music/love_me_like_you_do.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Try to force play audio (Chrome requires interaction)
+    window.addEventListener('click', function() {
+      const audio = document.getElementById('bgm');
+      audio.play();
+    });
+  </script>
+
+  <div class="letter-container">
+    Hey lovely lady.. 
+
+    how are you doing darling? did u eat well? i miss you too much.🤧
+    i just wanted to tell you that you are an amazing sister i have in this lifetime.
+    
+    i am so much lucky to have the best of all❤️. i wish i can be with you all the time and hold ur hands when u are facing ur worst days.
+    but i couldn't be there always. i am sorry for that. but u know what? no matter what happens around us i will stay with you.🫂
+
+    i will stand with you even if the world is against you. i will fight for you. i will not let anything hurt you.😁
+    
+    come soon to meet me and we will let everyone get jealous on ur soon😚
+    <div class="signature">
+      with all my love,
+      your sweeettt little sister🎀
+    </div>
+  </div>
+
+</body>
+</html>
